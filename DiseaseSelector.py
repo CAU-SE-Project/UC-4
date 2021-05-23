@@ -18,7 +18,7 @@ class DiseaseSelector:
         chrome_options.add_argument('headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('lang=ko_KR')
-        driver = webdriver.Chrome(r'C:\Users\user\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)
+        driver = webdriver.Chrome(r'C:\Users\user\CAUSE-project\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)
 
         # 질환백과 페이지로 이동
         driver.get(self.getUrl())
