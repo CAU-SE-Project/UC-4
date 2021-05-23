@@ -13,12 +13,21 @@ class DevCtrl(QWidget):
         self.setWindowTitle("SEARCH DISEASE")
         self.setGeometry(300,100,1200,800)
     
+        self.layout = QtWidgets.QHBoxLayout(self)
+        self.scrollArea = QtWidgets.QScrollArea(self)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.gridLayout = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.layout.addWidget(self.scrollArea)
+        
         #x축위치 y축위치, 넓이, 높이
         # label
         symptomsStr = ','.join(map(str,symptomsList))
         self.label = QLabel("선택된 증상: "+symptomsStr, self)
-        self.label.move(10, 10)
+        self.label.move(20, 20)
         self.label.resize(500, 30)
+        #self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
 
         # button
         self.btn = QPushButton("뒤로가기", self)
@@ -27,20 +36,11 @@ class DevCtrl(QWidget):
             "background-color: rgb(58, 134, 255);"
             "border-radius: 3px;"
         )
+        self.btn.resize(90, 35)
         self.btn.move(1100, 10)
 
-        self.btn.resize(80, 30)
         self.btn.clicked.connect(self.btn_clicked)
 
-        grid = QGridLayout()
-        self.setLayout(grid)
-        #self.addStretch()
-        #grid.setSpacing(20)
-        #grid.setAlignment(self, alignment=QtCore.Qt.AlignTop)
-
-
-        #names = ['상기도 감염', '인플루엔자', '신종플루', '폐렴', '감기',
-        #         '급성 호흡기 증후군', '코로나', '과제', '하기', '시러어어ㅓㅓ어어']
         names = diseaseList
 
         for i, name in enumerate(names):
@@ -53,11 +53,13 @@ class DevCtrl(QWidget):
                 "font-size: 18px;"
                 "width: 200px;"
                 "height: 200px;"
+                "margin-top: 10px;"
+                "margin-left: 10px;"
             )
             button.resize(100,100)
             button.clicked.connect(self.make_calluser(name))
             row, col = divmod(i, 4)
-            grid.addWidget(button, row, col, 1, 1)
+            self.gridLayout.addWidget(button, row+2, col, 1, 1)
            
     def breakName(self, name):
         n = 20
@@ -98,8 +100,8 @@ class DevCtrl2(QWidget):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.layout.addWidget(self.scrollArea)
 
-        #grid = QGridLayout()
-        #self.setLayout(grid)
+        #self.gridLayout = QGridLayout()
+        #self.setLayout(self.gridLayout)
 
         #x축위치 y축위치, 넓이, 높이
         self.button = QPushButton(self.breakName(diseaseName), self)
@@ -141,12 +143,10 @@ class DevCtrl2(QWidget):
         self.btn.setStyleSheet(
             "color: white;"
             "background-color: rgb(58, 134, 255);"
-            "border-radius: 5px;"
-            "margin-top: 3px;"
-            "margin-right: 10px;"
+            "border-radius: 3px;"
         )
+        self.btn.resize(90, 35)
         self.btn.move(1100, 10)
-        self.btn.resize(100, 35)
         self.btn.clicked.connect(self.btn_clicked)
         #self.gridLayout.addWidget(self.btn, 1, 12, 1, 1)
 
