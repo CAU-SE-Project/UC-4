@@ -54,7 +54,7 @@ class Controller:
 
 
 DiseaseList = []
-symptomlist = ['건망증']
+symptomlist = ['두통']
 controller = Controller(symptomlist)
 
 

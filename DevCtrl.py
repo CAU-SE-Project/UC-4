@@ -5,6 +5,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+import ClinicFinder
 
 class DevCtrl(QWidget):
     def __init__(self, symptomsList, diseaseList, controller):
@@ -224,7 +225,7 @@ class DevCtrl3(QWidget):
         )
         self.btn.move(50, 110)
         self.btn.resize(80, 30)
-        self.btn.clicked.connect(self.offline_clicked)
+        self.btn.clicked.connect(self.make_calluser(DiseaseInfo, "offline"))
 
         self.btn2 = QPushButton("비대면", self)
         self.btn2.setStyleSheet(
@@ -234,15 +235,15 @@ class DevCtrl3(QWidget):
         )
         self.btn2.move(180, 110)
         self.btn2.resize(80, 30)
-        self.btn2.clicked.connect(self.online_clicked)
+        self.btn2.clicked.connect(self.make_calluser(DiseaseInfo, "online"))
     
-    def offline_clicked(self):
-        print("offline")
-        self.close()
-
-    def online_clicked(self):
-        print("online")
-        self.close()
+    def make_calluser(self, DiseaseInfo, type):
+        def calluser():
+            print(DiseaseInfo, type)
+            if(type == "offline"):
+                ClinicFinder.ClinicFinder(DiseaseInfo).FindClinic()
+            self.close()
+        return calluser
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
