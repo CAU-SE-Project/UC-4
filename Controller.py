@@ -41,10 +41,17 @@ class Controller:
             if diseaseinfo == "진료과":
                 selectedDiseaseInfo[diseaseinfo] = tempDiseaseInfo[diseaseinfo]
         
+        f = open("selectedDiseaseInfo.txt", "w")
+        keys = list(selectedDiseaseInfo.keys())
+        for k in keys:
+            f.write(str(k)+": "+selectedDiseaseInfo[k]+"\n")
+        f.close()
+
         #print(diseaseinfo)
         print(tempDiseaseInfo)
         print(tempDiseaseInfo.keys())
         return selectedDiseaseInfo
+
 
 DiseaseList = []
 symptomlist = ['건망증']
