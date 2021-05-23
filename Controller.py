@@ -47,7 +47,7 @@ class Controller:
         return selectedDiseaseInfo
 
 DiseaseList = []
-symptomlist = ['기민상태']
+symptomlist = ['건망증']
 controller = Controller(symptomlist)
 
 
