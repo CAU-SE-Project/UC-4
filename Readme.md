@@ -1,5 +1,5 @@
-# Find-Disease
-Repository for Team C's subprogram, Find Disease
+# Search-Disease
+Repository for Team C's subprogram, Search Disease
 
 #### Requirements for Use Case 04
 - **REQ-17(6pts)** : As a general/patient user, the names of all possible diseases associated with my symptoms can be found on the Disease Search page.
