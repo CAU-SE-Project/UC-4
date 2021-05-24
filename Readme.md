@@ -39,8 +39,6 @@ git clone https://github.com/CAU-SE-Project/UC-4
 - Check your chome version and download at (https://sites.google.com/a/chromium.org/chromedriver/home)
 - change chromedriver path in DiseaseFinder.py, DiseaseSelector.py, and HospitalFinder.py
 
-```
-```
 
 ### Download selenium and PyQt5
 ```
