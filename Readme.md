@@ -1,4 +1,4 @@
-# Clinic-System
+# Find-Disease
 Repository for Team C's subprogram, Find Disease
 
 #### Requirements for Use Case 04
