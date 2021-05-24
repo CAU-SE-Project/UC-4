@@ -40,8 +40,12 @@ git clone https://github.com/CAU-SE-Project/UC-4
 - change chromedriver path in DiseaseFinder.py, DiseaseSelector.py, and HospitalFinder.py
 
 ```
+```
+
+### Download selenium and PyQt5
+```
 cd UC-4
 pip install selenium
-pip insatll PyQt5
+pip install PyQt5
 
 ```
