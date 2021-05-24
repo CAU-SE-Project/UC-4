@@ -45,5 +45,4 @@ git clone https://github.com/CAU-SE-Project/UC-4
 cd UC-4
 pip install selenium
 pip install PyQt5
-
 ```
