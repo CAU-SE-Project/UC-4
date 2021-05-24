@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-import ClinicFinder
+import HospitalFinder
 
 class DevCtrl(QWidget):
     def __init__(self, symptomsList, diseaseList, controller):
@@ -241,7 +241,7 @@ class DevCtrl3(QWidget):
         def calluser():
             print(DiseaseInfo, type)
             if(type == "offline"):
-                ClinicFinder.ClinicFinder(DiseaseInfo).FindClinic()
+                HospitalFinder.HospitalFinder(DiseaseInfo).FindHospital()
             self.close()
         return calluser
 
