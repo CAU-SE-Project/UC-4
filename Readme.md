@@ -10,9 +10,9 @@ Repository for Team C's subprogram, Find Disease
 
 - **REQ-20(1pts)** : As a general/patient user, I can choose whether to receive medical treatment for the disease.
 
-- **REQ-21(1pts)** : As a general/patient user, you can choose whether to receive treatment face-to-face or non-face-to-face.
+- **REQ-21(1pts)** : As a general/patient user, I can choose whether to receive treatment face-to-face or non-face-to-face.
 
-- **REQ-22(7pts)** : As a general/patient user, can receive recommendations from nearby clinics based on your current location.
+- **REQ-22(7pts)** : As a general/patient user, I can receive recommendations from nearby clinics based on your current location.
 
 
 
