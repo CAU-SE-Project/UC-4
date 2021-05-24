@@ -28,7 +28,7 @@ Repository for Team C's subprogram, Find Disease
 - Controller.py : symptomlist에 증상을 넣고 Controller 객체 생성
 - DiseaseFinder.py : checkDisease()함수에서 해당 symptoms과 관련된 질병 이름과 사이트 url을 tempDiseaseFinder에 반환
 - DiseaseSelector.py : makeSelectedDiseaseInfo()함수에서 해당 질병의 자세한 정보(정의, 원인, 증상, 진단, 진료, 경과, 주의사항, 관련질환, 진료과) 를 tempDiseaseInfo에 반환
-- HospitalFinder.py : 선택된 질병의 진료과 정보를 GET방식으로 https://reserve-gwabang.web.app/cause_project2.html 사이트에 전달, 근처 병원 검색 결과를 지도에 표시
+- HospitalFinder.py : 선택된 질병의 진료과 정보를 GET방식으로 CAUSE-FIND-HOSPITAL(https://reserve-gwabang.web.app/cause_project2.html) 사이트에 전달, 병원을 검색해 결과를 지도에 표시
 - DevCtrl.py : 받아온 정보를 GUI로 화면에 출력
 - selectedDiseaseInfo.txt : 선택된 질병의 이름과 진료과 정보를 DB에 저장해 다음에도 사용할 수 있도록 함
 
@@ -41,8 +41,8 @@ git clone https://github.com/CAU-SE-Project/UC-4
 ```
 
 ### Download chromedriver
-- Check your chome version and download at (https://sites.google.com/a/chromium.org/chromedriver/home)
-- change chromedriver path in DiseaseFinder.py, DiseaseSelector.py, and HospitalFinder.py
+- Check your chome version and download chromedriver at (https://sites.google.com/a/chromium.org/chromedriver/home)
+- Change chromedriver path in DiseaseFinder.py, DiseaseSelector.py, and HospitalFinder.py
 
 
 ### Download selenium and PyQt5
