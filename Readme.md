@@ -1,7 +1,7 @@
 # Clinic-System
 Repository for Team C's subprogram, Find Disease
 
-#### Requirements for Use Case 01
+#### Requirements for Use Case 04
 - **REQ-17(6pts)** : As a general/patient user, the names of all possible diseases associated with my symptoms can be found on the Disease Search page.
 
 - **REQ-18(5pts)** : As a general/patient user, click on the name of the disease to view the definition, cause, symptoms, diagnosis, treatment, progress, precautions, and medical information of the disease
