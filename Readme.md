@@ -31,7 +31,7 @@ Repository for Team C's subprogram, Find Disease
 
 - **DiseaseSelector.py** : makeSelectedDiseaseInfo()함수에서 해당 질병의 자세한 정보(정의, 원인, 증상, 진단, 진료, 경과, 주의사항, 관련질환, 진료과) 를 tempDiseaseInfo에 반환
 
-- **HospitalFinder.py** : 선택된 질병의 진료과 정보를 GET방식으로 CAUSE-FIND-HOSPITAL (https://reserve-gwabang.web.app/cause_project2.html) 사이트에 전달, 병원을 검색해 결과를 지도에 표시
+- **HospitalFinder.py** : 선택된 질병의 진료과 정보를 GET방식으로 CAUSE_UC-4 (https://reserve-gwabang.web.app/cause_project2.html) 사이트에 전달, 병원을 검색해 결과를 지도에 표시
 
 - **DevCtrl.py** : 받아온 정보를 GUI로 화면에 출력, 사용자 입력을 Controller에 전달
 
