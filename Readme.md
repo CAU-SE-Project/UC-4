@@ -27,7 +27,8 @@ Repository for Team C's subprogram, Search Disease
 You can see demonstration of the project below
 - UC4_screen_recording.mp4
 
-- ![image](https://user-images.githubusercontent.com/48945057/120111730-0c506e00-c1ae-11eb-8861-1300d1cc691f.png)
+- ex)
+![image](https://user-images.githubusercontent.com/48945057/120111730-0c506e00-c1ae-11eb-8861-1300d1cc691f.png)
 
 
 ## Installation
