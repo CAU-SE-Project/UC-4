@@ -1,21 +1,6 @@
 # Search-Disease
 Repository for Team C's subprogram, Search Disease
 
-#### Requirements for Use Case 04
-- **REQ-17(6pts)** : As a general/patient user, the names of all possible diseases associated with my symptoms can be found on the Disease Search page.
-
-- **REQ-18(5pts)** : As a general/patient user, click on the name of the disease to view the definition, cause, symptoms, diagnosis, treatment, progress, precautions, and medical information of the disease
-
-- **REQ-19(10pts)** : The system can retrieve all disease information from the database and filter only the diseases associated with the symptoms.
-
-- **REQ-20(1pts)** : As a general/patient user, I can choose whether to receive medical treatment for the disease.
-
-- **REQ-21(1pts)** : As a general/patient user, I can choose whether to receive treatment face-to-face or non-face-to-face.
-
-- **REQ-22(7pts)** : As a general/patient user, I can receive recommendations of nearby hospitals based on your current location.
-
-
-
 ## Requirement
 - Windows, MacOS or Linux (Ubuntu recommended)
 - Python 3 (We tested in conda, but not necessary)
@@ -52,7 +37,13 @@ git clone https://github.com/CAU-SE-Project/UC-4
 
 ### Download selenium and PyQt5
 ```
-cd UC-4
+cd UC-4_Search_Disease
 pip install selenium
 pip install PyQt5
+```
+
+### Run Demo
+```
+cd UC-4_Search_Disease
+python controller.py
 ```
