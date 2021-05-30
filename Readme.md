@@ -27,7 +27,7 @@ The package requires python3, selenium, and chromedriver(has to match your chrom
 - Download the repository
 
 ```
-git clone https://github.com/CAU-SE-Project/UC-4
+git clone https://github.com/CAU-SE-Project/UC-4-Search-Disease
 ```
 
 ### Download chromedriver
