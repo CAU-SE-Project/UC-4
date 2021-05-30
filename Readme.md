@@ -21,6 +21,9 @@ Repository for Team C's subprogram, Search Disease
 - **DevCtrl.py** : 받아온 정보를 GUI로 화면에 출력, 사용자 입력을 Controller에 전달
 
 - **selectedDiseaseInfo.txt** : 선택된 질병의 이름과 진료과 정보를 DB에 저장해 다음에도 사용할 수 있도록 함
+![image](https://user-images.githubusercontent.com/48945057/120111234-1f623e80-c1ac-11eb-92fa-0cdaf5365965.png) ![image](https://user-images.githubusercontent.com/48945057/120111260-34d76880-c1ac-11eb-8772-c76ae331164f.png)
+
+
 
 ## Installation
 The package requires python3, selenium, and chromedriver(has to match your chrome version)
