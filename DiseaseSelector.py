@@ -14,13 +14,13 @@ class DiseaseSelector:
         from selenium.webdriver.common.keys import Keys
         from selenium.webdriver.support.ui import Select
 
-        # 크롬 드라이버로 크롬을 실행한다.
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('lang=ko_KR')
-        driver = webdriver.Chrome(
-            r'C:\Users\es344\chromedriver', chrome_options=chrome_options)
+
+        # 크롬 드라이버로 크롬을 실행한다.
+        driver = webdriver.Chrome(r'C:\Users\user\CAUSE-project\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)
 
         # 질환백과 페이지로 이동
         driver.get(self.getUrl())

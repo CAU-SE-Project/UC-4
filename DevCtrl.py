@@ -7,7 +7,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 import HospitalFinder
 
-class DevCtrl(QWidget):
+class Viewer(QWidget):
     def __init__(self, symptomsList, diseaseList, controller):
         super().__init__()
         self.Controller = controller
@@ -77,22 +77,22 @@ class DevCtrl(QWidget):
         return '\n'.join(list)
     
     def btn_clicked(self):
+        self.Controller.back = True
         self.close()
 
     def make_calluser(self, name):
         def calluser():
             print(name)
             self.Controller.selectDisease(name)
-            #self.windowExample2 = DevCtrl2(name)
-            #self.windowExample2.show()
         return calluser
 
-class DevCtrl2(QWidget):
-    def __init__(self, diseaseName, tempDiseaseInfo):
+class Viewer2(QWidget):
+    def __init__(self, diseaseName, tempDiseaseInfo, controller):
         super().__init__()
         self.setWindowTitle("DISEASE INFO")
         self.setGeometry(300,100,1200,800)
 
+        self.Controller = controller
         self.layout = QtWidgets.QHBoxLayout(self)
         self.scrollArea = QtWidgets.QScrollArea(self)
         self.scrollArea.setWidgetResizable(True)
@@ -192,16 +192,17 @@ class DevCtrl2(QWidget):
         return '\n'.join(list)
     
     def btn_clicked(self):
+        self.Controller.back = True
         self.close()
 
     def make_calluser(self, DiseaseInfo):
         def calluser():
             print(DiseaseInfo)
-            self.windowExample3 = DevCtrl3(DiseaseInfo)
+            self.windowExample3 = Viewer3(DiseaseInfo)
             self.windowExample3.show()
         return calluser
 
-class DevCtrl3(QWidget):
+class Viewer3(QWidget):
     def __init__(self, DiseaseInfo):
         super().__init__()
         self.setWindowTitle("GET TREATMENT")
@@ -251,8 +252,8 @@ if __name__ == '__main__':
              '급성 호흡기 증후군', '코로나', '과제', '하기', '시러어어ㅓㅓ어어']
     temp = {'증상': '신상아 괴사성 장염 초기에 증상이 경미할 때는 소화 불량과 증상이 비슷할 수 있습니다. 초기의 주요 증상은 복부 팽만과 이전에 섭취한 우유가 위에 그대로 남아 있는 것입니다. 그 외에 아기의 배가 부르고, 아기가 잘 빨지 않으며, 늘어지면서 잠혈변(눈에 보이지 않는 혈변)이 보입니다. 이러한 증상은 서서히 시작되며, 미숙아나 신생아의 경우 증상이 미약하여 잘 발견되지 않는 경우가 많습니다.상아 괴사성 장염 초기에 증상이 경미할 때는 소화 불량과 증상이 비슷할 수 있습니다. 초기의 주요 증상은 복부 팽만과 이전에 섭취한 우유가 위에 그대로 남아 있는 것입니다. 그 외에 아기의 배가 부르고, 아기가 잘 빨지 않으며, 늘어지면서 잠혈변(눈에 보이지 않는 혈변)이 보입니다. 이러한 증상은 서서히 시작되며, 미숙아나 신생아의 경우 증상이 미약하여 잘 발견되지 않는 경우가 많습니다.위에 그대로 남아 있는 것입니다. 그 외에 아기의 배가 부르고, 아기가 잘 빨지 않으며, 늘어지면서 잠혈변(눈에 보이지 않는 혈변)이 보입니다. 이러한 증상은 서서히 시작되며, 미숙아나 신생아의 경우 증상이 미약하여 잘 발견되지 않는 경우가 많습니다.위에 그대로 남아 있는 것입니다. 그 외에 아기의 배가 부르고, 아기가 잘 빨지 않으며, 늘어지면서 잠혈변(눈에 보이지 않는 혈변)이 보입니다. 이러한 증상은 서서히 시작되며, 미숙아나 신생아의 경우 증상이 미약하여 잘 발견되지 않는 경우가 많습니다.\n  증상이 심해지면 무호흡 증, 서맥, 저체온, 기민 상태, 신경과민, 담즙 섞인 구토, 피 섞인 구토, 복부 팽만, 혈변과 심한 설사, 위 팽만 등의 증상이 나타날 수 있습니다. 이러한 정상이 점점 더 심해질 수 있습니다. 아기가 잘 먹지 않습니다.  또한 저혈압, 저체온, 창백, 호흡 곤란 등 패혈증과 비슷한 증상이 나타날 수 있습니다. 복막염, 장 천공, 쇼크 및 사망까지 이를 수도 있습니다.', '관련질환': '신생아 답즙정체증, 신생아 호흡곤란증후군', '진료과': '산부인과, 신생아과, 소아외과', '동의어': 'Neonatal Necrotizing Enterocolitis,신생아 괴사성 소장결장염,태아 및 신생아의 괴사성 소장결장염', '정의': '신생아 괴사성 장염은 신생아의 소장이나 대장에 생기는 괴사 성 장염입니다. 여러 가지 원인에 의해 발생할 수 있는 신생아 중증 질환의 하나입니다. 장 점막의 괴사가 다양한 정도로 일어나는 것이 특징입니다. 치료하더라도 사망률이 20%에 이르는 무서운 질병입니다.\n ', '원인': '신생아 괴사성 장염은 주로 미숙아에게 발생합니다. 그 원인은 명확하게 밝혀지지 않았습니다. 1,500g 미만 신생아의 발생 빈도는 5% 내외로, 미숙아 자체가 가장 큰 위험 요인입니다. 그 외에도 고농도 우유, 저산소증, 너무 빠른 영양법, 적혈구 증가증, 감염증 등 다양한 위험 요인이 장 점막의 손상, 이차적 세균 감염, 장의 괴사를 일으키는 데 작용합니다. 만삭아의 경우는 심장 질환이나 저산소증이 있을 때 발생할 수 있습니다.', ' 진단': '신생아 괴사성 장염은 병력, 증상, 진찰 등을 종합해서 진단할 수 있습니다. 조기에 진단하고 적극적으로 치료하면 병의 진행을 막을 수 있으므로, 병을 의심하여 찾아내는 것이 중요합니다. 주로 복부 X-ray 사진만으로 진단할 수 있으며, 필요에 따라 복부 초음파 소견이 도움이 될 수 있습니다. 단순 복부 촬영상 이상 소견이 보이며, 장벽 내 공기가 진단에 가장 중요합니다. 간문맥 내 공기가 보이거나 복강 내 공기가 보이면 장 천공을 의미합니다.', '치료': '신생아 괴사성 장염 환아에게는 장기간 금식에 따라 정맥 주사로 인공적 영양 공급을 행해야 합니다. 그러나 이와 같은 정맥 영양법에 의한 합병증으로 패혈증, 혈전증 및 간경변으로 진행 하는 담즙 정체성 황달 등이 생길 수 있습니다.', '경과': '신생아 괴사성 장염을 내과적으로 치료했을 때, 진단 시 장벽 내 공기가 있었던 환자의 20%는 치료에 실패합니다. 이러한 환자 중 9~25%가 사망합니다. 약 10%의 환자는 괴사된 부위에 협착이 생길 수 있습니다. 장의 괴사가 심했던 경우는 생존하더라도 단장 증후군(short bowel syndrome)이 발생하여 영양에 어려움을 겪을 수 있습니다.', '주의사항': '신생아 괴사성 장염은 사망 을 초래할 수 있는 중증 신생아 질환입니다. 따라서 확진된 환자뿐 아니라 의심되는 환자도 집중 치료를 시작해야 합니다. 입을 통한 영양 공급을 일시 중단하고, 혈관을 통한 수액 공급, 전해질 공급, 영양 공급 등을 시 행합니다. 혈액, 대변 및 척수액 배양 검사 시행 후 전신적 항생제로 치료해야 합니다. 장이 천공된 증거가 있으면 괴사된 장을 외과적으로 절제합니다.', '초보엄마가 알아야 할 신생아 응급상황': '이병섭'}
 
-    #windowExample = DevCtrl(["두통","피곤함","졸림"], names)
-    windowExample2 = DevCtrl2("코로나", temp)
+    #windowExample = Viewer(["두통","피곤함","졸림"], names)
+    windowExample2 = Viewer2("코로나", temp)
     #windowExample.show()
     windowExample2.show()
     sys.exit(app.exec_())

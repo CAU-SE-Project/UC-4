@@ -14,14 +14,13 @@ class DiseaseFinder:
         from selenium.webdriver.common.keys import Keys
         from selenium.webdriver.support.ui import Select
 
-        # 크롬 드라이버로 크롬을 실행한다.
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('lang=ko_KR')
-        driver = webdriver.Chrome(
-            r'C:\Users\es344\chromedriver', chrome_options=chrome_options)
 
+        # 크롬 드라이버로 크롬을 실행한다.
+        driver = webdriver.Chrome(r'C:\Users\user\CAUSE-project\chromedriver_win32\chromedriver.exe', chrome_options=chrome_options)
         # 신체부위 체크
         task_list = [['머리', '?partId=B000007'], ['목', '?partId=B000008'],
                      ['가슴', '?partId=B000020'], ['배', '?partId=B000010'],
